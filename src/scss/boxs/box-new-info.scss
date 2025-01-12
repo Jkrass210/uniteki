@@ -1,0 +1,21 @@
+.box-new-info {
+  position: absolute;
+  left: 130px;
+  right: 130px;
+  bottom: -90px;
+  z-index: 4;
+
+  &__list {
+    border-radius: 16px;
+    padding: 35px 32px;
+    background-color: var(--color-text-white);
+    box-shadow: 0 4px 15px 5px rgba(151, 151, 151, 0.25);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    li {
+      flex: 1;
+    }
+  }
+}

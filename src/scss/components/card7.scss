@@ -1,0 +1,70 @@
+.card7 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  
+  &__link{
+    height: 100%;
+    position: relative;
+    padding: 8px 0;
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: background-color 0.4s ease-in-out;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22%;
+      left: 50px;
+      z-index: 0;
+      width: 60px;
+      height: 90px;
+      border-radius: 100%;
+      transform: translatex(-50%) rotate(64deg);
+      background-color: var(--uniteki-ru-hit-gray);
+      transition: background-color 0.4s ease-in-out;
+    }
+
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--akcent);
+      &::before {
+        background-color: var(--color-text-white);
+      }
+      span {
+        color: var(--color-text-white);
+      }
+    }
+
+    picture {
+      display: flex;
+    }
+   
+    img {
+      position: relative;
+      border-radius: 14px;
+      max-width: 95px;
+      height: 100%;
+      max-height: 130px;
+      object-fit: cover;
+    }
+
+    span {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: var(--color-text-black);
+      transition: color 0.4s ease-in-out;
+    }
+  }
+}

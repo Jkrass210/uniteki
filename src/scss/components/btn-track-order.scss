@@ -1,0 +1,38 @@
+.btn-track-order {
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--hovered);
+  transition: color 0.4s ease-in-out;
+
+  span {
+    padding: 10px 10px 10px 16px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  picture {
+    display: flex;
+  }
+
+  img {
+    border-radius: 100px;
+    width: 34px;
+    min-height: 34px;
+    height: 34px;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover,
+  &:active {
+    color: var(--color-text-gray);
+  }
+}

@@ -1,0 +1,41 @@
+.box-form-help {
+  border-radius: 20px;
+  padding: 30px;
+  height: 100%;
+  background-color: var(--gray10);
+  h3 {
+    margin-bottom: 22px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--color-text-black);
+  }
+  &__list {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    li{
+      flex: 1;
+      &:last-child {
+        flex: 0.75;
+      }
+    }
+  }
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    padding: 9px 10px;
+    border: none;
+    border-bottom: 1px solid var(--ui);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-text-black);
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+  }
+  &__submit {
+    width: 100%;
+  }
+}

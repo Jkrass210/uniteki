@@ -1,0 +1,15 @@
+.section-title {
+  margin-bottom: 40px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 111%;
+  color: var(--color-text-black);
+}
+
+@media (max-width: 1030px) {
+  .section-title {
+    margin-bottom: 25px;
+    font-size: 28px;
+  }
+}

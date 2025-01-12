@@ -1,0 +1,188 @@
+.card3 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  height: 100%;
+  &__box-img {
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--fon);
+
+    picture {
+      display: flex;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    button {
+      width: 26px;
+      height: 26px;
+      min-width: 26px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      z-index: 1;
+      border-radius: 100%;
+      color: var(--color-text-black);
+      background-color: var(--color-text-white);
+
+      &.active {
+        color: var(--akcent);
+      }
+
+      &:focus,
+      &:focus-visible {
+        outline: none;
+      }
+
+      &:focus-visible,
+      &:hover,
+      &:active {
+        color: var(--color-btn-gray2);
+      }
+    }
+  }
+  &__box-content {
+    min-height: 35px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  &__link-card {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 143%;
+    color: var(--color-text-black);
+    transition: color 0.4s ease-in-out;
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: var(--knopka);
+    }
+
+    & span {
+      margin-right: 7px;
+    }
+
+    & strong {
+      margin-right: 7px;
+    }
+
+    & span:last-child {
+      margin-right: 0;
+    }
+  }
+  &__size {
+    display: block;
+    margin-right: 0;
+  }
+
+  &__box-price {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__price {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+
+    & span {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 87%;
+      color: var(--color-text-black);
+    }
+
+    & span:last-child {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 117%;
+      text-decoration: line-through;
+      color: var(--color-text-gray);
+    }
+  }
+
+  &__btn-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__btn {
+    border-radius: 100%;
+    width: 35px;
+    min-width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray10);
+    color: var(--color-text-black);
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,&:hover,&:active {
+      background-color: var(--color-btn-gray2);
+      color: var(--color-text-white);
+    }
+  }
+
+  &__box-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .card3 {
+    &__box-img {
+      margin-bottom: 11px;
+    }
+
+    &__link-card {
+      font-size: 12px;
+    }
+
+    &__box-price {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+}

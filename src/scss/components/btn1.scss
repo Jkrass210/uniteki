@@ -1,0 +1,65 @@
+.btn1 {
+  position: relative;
+  pointer-events: auto;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid var(--knopka);
+  background-color: var(--color-text-white);
+
+  &__link {
+    display: flex;
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:focus-visible,
+    &:hover,
+    &:active {
+      .btn1__text {
+        color: var(--color-btn-gray2);
+      }
+      .btn1__box-svg {
+        background-color: var(--color-btn-gray2);
+      }
+    }
+  }
+  &__text {
+    padding: 12px 73px 12px 30px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+    color: var(--color-text-black);
+  }
+  &__box-svg {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    bottom: -1px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    color: var(--color-text-white);
+    background-color: var(--akcent);
+    transition: background-color 0.4s ease-in-out;
+  }
+}
+
+@media (max-width: 1030px) {
+  .btn1 {
+    &__text {
+      padding: 8px 20px;
+      font-size: 16px;
+    }
+
+    &__box-svg {
+      svg {
+        width: 17px;
+        height: 15px;
+      }
+    }
+  }
+}

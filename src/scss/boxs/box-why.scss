@@ -1,0 +1,10 @@
+.box-why {
+  &__list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    li {
+      flex: 1;
+    }
+  }
+}

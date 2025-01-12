@@ -1,0 +1,12 @@
+.box-swiper1 {
+  &__top {
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__swiper-slide {
+    box-sizing: border-box;
+    height: auto;
+  }
+}
