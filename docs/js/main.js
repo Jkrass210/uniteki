@@ -141,8 +141,8 @@ function initSwiper5() {
     const swiper5 = new Swiper("#swiper-5", {
       spaceBetween: 10,
       navigation: {
-        nextEl: ".product-card-sec1__button-next",
-        prevEl: ".product-card-sec1__button-prev",
+        nextEl: ".product-card-sec1__button-prev",
+        prevEl: ".product-card-sec1__button-next",
       },
       thumbs: {
         swiper: swiper6,

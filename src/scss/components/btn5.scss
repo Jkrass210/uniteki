@@ -5,13 +5,14 @@
   padding: 10px;
   border-radius: 10px;
   white-space: nowrap;
+  border: 1px solid var(--fon);
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 14px;
   text-align: center;
-  color: var(--color-text-white);
-  background-color: var(--knopka);
-  transition: background-color 0.4s ease-in-out;
+  color: var(--color-text-black);
+  background-color: transparent;
+  transition: border-color 0.4s ease-in-out;
 
   &:focus,
   &:focus-visible {
@@ -21,6 +22,6 @@
   &:hover,
   &:focus-visible,
   &:active {
-    background-color: var(--akcent);
+    border-color: var(--color-text-black);
   }
 }

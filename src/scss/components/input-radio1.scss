@@ -1,0 +1,37 @@
+.input-radio1 {
+  cursor: pointer;
+  display: flex;
+  &:hover,&:active {
+    span {
+      outline-color: var(--akcent);
+    }
+  }
+  input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+
+    &:focus,&:focus-visible {
+      outline: none;
+
+      & + span {
+        outline-color: var(--akcent);
+      }
+    }
+
+    &:checked + span {
+      outline-color: var(--akcent);
+    }
+  }
+  span {
+    display: flex;
+    width: 26px;
+    min-width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    overflow: hidden;
+    outline: 1px solid transparent;
+  }
+}

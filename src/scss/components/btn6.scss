@@ -3,18 +3,16 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  border-radius: 10px 10px 0 0;
   padding: 30px;
-  background-color: var(--fon2);
-  border-bottom: 1px solid var(--border1);
+  border-bottom: 1px solid var(--color-text-black);
   white-space: nowrap;
   font-family: var(--font-family);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 24px;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--color-text-black);
-  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out;
 
   &:focus,
   &:focus-visible {
@@ -24,13 +22,13 @@
   &:hover,
   &:focus-visible,
   &:active {
-    color: var(--color-text-white);
-    background-color: var(--color-text-black);
+    color: var(--akcent);
+    border-color: var(--akcent);
   }
 
   &.active {
-    color: var(--color-text-white);
-    background-color: var(--color-text-black);
+    color: var(--akcent);
+    border-color: var(--akcent);
   }
 }
 
