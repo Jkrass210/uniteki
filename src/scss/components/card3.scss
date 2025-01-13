@@ -7,6 +7,15 @@
   justify-content: space-between;
   gap: 20px;
   height: 100%;
+  &__swiper-pagination {
+    bottom: 15px !important;
+    .swiper-pagination-bullet {
+      margin: 0 2px !important;
+      &.swiper-pagination-bullet-active {
+        background: var(--akcent);
+      }
+    }
+  }
   &__box-img {
     border-radius: 20px;
     position: relative;

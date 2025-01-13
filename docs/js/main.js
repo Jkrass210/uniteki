@@ -69,6 +69,23 @@ if (document.querySelector('#swiper-2') && document.querySelector('#swiper-2 > .
   });
 }
 
+if (document.querySelectorAll(".card3__swiper")){
+  document.querySelectorAll('.card3__swiper').forEach((swiperContainer) => {
+    new Swiper(swiperContainer, {
+      slidesPerView: 1,
+      //direction: 'horizontal',
+      spaceBetween: 10,
+      pagination: {
+        el: '.card3__swiper-pagination',
+        clickable: true,
+      },
+      allowTouchMove: false, // Отключить свайп
+      simulateTouch: false,
+      nested: true, // Важно для вложенных свайперов
+    });
+  })
+}
+
 if (document.querySelector('#swiper-3') && document.querySelector('#swiper-3 > .swiper-wrapper') && document.querySelectorAll('#swiper-3 > .swiper-slide')) {
   const swiper3 = new Swiper("#swiper-3", {
     slidesPerView: 1,

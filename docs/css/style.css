@@ -995,6 +995,18 @@ body {
   height: 100%;
 }
 
+.card3__swiper-pagination {
+  bottom: 15px !important;
+}
+
+.card3__swiper-pagination .swiper-pagination-bullet {
+  margin: 0 2px !important;
+}
+
+.card3__swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--akcent);
+}
+
 .card3__box-img {
   border-radius: 20px;
   position: relative;
@@ -1567,8 +1579,6 @@ body {
   z-index: 1;
   height: 100%;
   background-color: var(--color-text-gray);
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(22.5%, rgba(0, 0, 0, 0)), color-stop(63.5%, rgba(34, 34, 34, 0.94)));
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 22.5%, rgba(34, 34, 34, 0.94) 63.5%);
 }
 
 .slide-hero::after {
@@ -1576,8 +1586,7 @@ body {
   position: absolute;
   content: "";
   inset: 0;
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(22.5%, rgba(0, 0, 0, 0)), color-stop(63.5%, rgba(34, 34, 34, 0.94)));
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 22.5%, rgba(34, 34, 34, 0.94) 63.5%);
+  background-image: linear-gradient(272deg, rgba(0, 0, 0, 0) -3.5%, rgba(34, 34, 34, 0.94) 99.5%);
 }
 
 .slide-hero img {
@@ -5581,8 +5590,7 @@ body {
   z-index: 1;
   position: absolute;
   inset: 0;
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(22.5%, rgba(0, 0, 0, 0)), color-stop(63.5%, rgba(34, 34, 34, 0.94)));
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 22.5%, rgba(34, 34, 34, 0.94) 63.5%);
+  background-image: linear-gradient(272deg, rgba(0, 0, 0, 0) -3.5%, rgba(34, 34, 34, 0.94) 99.5%);
 }
 
 .box-pro-line__img,
