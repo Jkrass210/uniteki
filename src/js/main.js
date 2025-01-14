@@ -6,6 +6,8 @@ import { testWebP } from './module/testWebP.js';
 import { toggleModal } from './module/toggleModal.js';
 import { newTabs } from './module/newTabs.js';
 import { playVideo } from './module/playVideo.js';
+import { initializeDropdown } from './module/initializeDropdown.js';
+
 
 testWebP(function (support) {
   if (support == true) {
@@ -405,6 +407,10 @@ if (document.querySelector('.box-double-catalog')){
 
 if(document.querySelectorAll(".btn-video-play")) {
   playVideo()
+}
+
+if(document.querySelectorAll(".drop-down3")){
+  initializeDropdown('drop-down3__btn', 'drop-down3__list', 'active');
 }
 
 

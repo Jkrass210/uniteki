@@ -1,6 +1,6 @@
 .static-page-sec1 {
+  background-color: var(--color-background-personal);
   &__content {
-    border-radius: 20px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 15px;
@@ -8,10 +8,8 @@
     color: var(--color-text-black);
     display: flex;
     flex-direction: column;
-    padding: 32px 47px;
     justify-content: space-between;
     gap: 20px;
-    background-color: var(--color-background-card);
 
     span {
       color: var(--color-text-black) !important;

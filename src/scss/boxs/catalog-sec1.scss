@@ -15,77 +15,58 @@
       display: flex;
     }
   }
-  &__content {
+  &__banner-box {
+    margin-bottom: 40px;
+    border-radius: 20px;
+    overflow: hidden;
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
-  }
-
-  &__aside {
-    width: calc(310 / 1310 * 100%);
-  }
-
-  &__title {
-    margin-bottom: 20px;
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 200%;
-    text-transform: uppercase;
-    color: var(--akcent);
-  }
-
-  &__products {
-    flex: 1;
-  }
-
-  &__products-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-    row-gap: 60px;
-  }
-}
-
-
-@media (max-width: 1030px) {
-  .catalog-sec1 {
-    &__content {
-      flex-direction: column;
-    }
-
-    &__aside {
+    img,picture {
+      max-height: 200px;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
-}
+  &__products-list {
+    margin-bottom: 50px;
+    display: flex;
+    column-gap: calc(10 / 1310 * 100%);
+    row-gap: 30px;
+    flex-wrap: wrap;
 
-@media (max-width: 950px) {
-  .catalog-sec1 {
-    &__top-line-list {
-      flex-wrap: nowrap;
-      overflow: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-  
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-    &__list-catalog {
-      grid-template-columns: 1fr 1fr;
+
+    li {
+      width: calc(320 / 1310 * 100%);
     }
   }
-}
+  &__bottom-line {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-@media (max-width: 669px) {
-  .catalog-sec1 {
-    &__products-list {
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+    .btn3__btn {
+      min-height: 43px;
+      min-width: 218px;
     }
-    &__list-catalog {
-      grid-template-columns: 1fr;
+  }
+  &__link-download {
+    position: absolute;
+    right: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 135%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--color-text-black);
+    transition: color 0.4s ease-in-out;
+
+    &:focus,&:focus-visible {
+      outline: none;
+    }
+    &:focus-visible,&:hover,&:active {
+      color: var(--color-btn-gray2);
     }
   }
 }

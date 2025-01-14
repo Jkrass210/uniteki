@@ -7,45 +7,11 @@
     @@include('html/components/path.html',{"text":"Каталог"})
     <section class="section catalog-sec1">
       <div class="catalog-sec1__container container">
-        <h1 class="section-title">Каталог</h1>
-        <!--<div class="catalog-sec1__top-line">
-          <ul class="catalog-sec1__top-line-list list-reset">
-            <li>
-              @@include('html/components/btn2.html',{"text":"Для внедорожников"})
-            </li>
-            <li>
-              @@include('html/components/btn2.html',{"text":"Для квадроциклов"})
-            </li>
-            <li>
-              @@include('html/components/btn2.html',{"text":"Для лодок, катеров"})
-            </li>
-            <li>
-              @@include('html/components/btn2.html',{"text":"Для лодок, катеров"})
-            </li>
-            <li>
-              @@include('html/components/btn2.html',{"text":"Для лодок, катеров"})
-            </li>
-            <li>
-              @@include('html/components/btn2.html',{"text":"Для лодок, катеров"})
-            </li>
-            <li>
-              @@include('html/components/btn2.html',{"text":"Для лодок, катеров"})
-            </li>
-            <li>
-              @@include('html/components/btn2.html',{"text":"ывапывпывп"})
-            </li>
-          </ul>
-        </div>-->
         <div class="catalog-sec1__content">
-          <div class="catalog-sec1__aside">
-            <div class="catalog-sec1__box-double-catalog">
-              @@include('html/boxs/box-double-catalog.html')
-            </div>
-            <h3 class="catalog-sec1__title">
-              фильтры
-            </h3>
-            @@include('html/boxs/filters.html')
+          <div class="catalog-sec1__banner-box">
+            <img src="img/catalog-banner/1.jpg" alt="banner">
           </div>
+          @@include('html/boxs/filters.html')
           <div class="catalog-sec1__products">
             @@include('html/components/drop-down1.html',{"idBtn":"drop1"})
             <ul class="catalog-sec1__products-list list-reset">
@@ -94,7 +60,16 @@
               <li>
                 @@include('html/components/card3.html',{"urlImg":"img/main-page/sec4/1.png","text1":"Аккумулятор","textStrong":"NITECORE NL1834","text2":"18650 3.7v 3400mA","textSize":"1*21700/1*18650/2*RC123","idInput":"comparison1","text":"В сравнении"})
               </li>
+              <li>
+                @@include('html/components/card3.html',{"urlImg":"img/main-page/sec4/1.png","text1":"Аккумулятор","textStrong":"NITECORE NL1834","text2":"18650 3.7v 3400mA","textSize":"1*21700/1*18650/2*RC123","idInput":"comparison1","text":"В сравнении"})
+              </li>
             </ul>
+            <div class="catalog-sec1__bottom-line">
+              <a href="#" class="btn3__btn">
+                Показать еще
+              </a>
+              <a href="#" class="catalog-sec1__link-download" download>Скачать полный каталог.pdf</a> 
+            </div>
             @@include('html/components/list-pages.html')
           </div>
         </div>
