@@ -5,41 +5,66 @@
   @@include('html/boxs/header.html')
   <main class="main">
     @@include('html/components/path.html',{"text":"Каталог"})
-    <section class="section catalog-sec1">
-      <div class="catalog-sec1__container container">
-        @@include('html/components/section-title1.html',{"title":"Каталог товаров"})
-        <ul class="catalog-sec1__list-catalog list-reset">
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/1.jpg","title":"ОСВЕЩЕНИЕ","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/2.jpg","title":"УЛИЧНАЯ ЭЛЕКТРОНИКА","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/3.jpg","title":"ФОТО ЭЛЕКТРОНИКА","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/4.jpg","title":"АКСЕССУАРЫ","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/1.jpg","title":"ОСВЕЩЕНИЕ","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/2.jpg","title":"УЛИЧНАЯ ЭЛЕКТРОНИКА","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/3.jpg","title":"ФОТО ЭЛЕКТРОНИКА","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/4.jpg","title":"АКСЕССУАРЫ","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/2.jpg","title":"УЛИЧНАЯ ЭЛЕКТРОНИКА","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-          <li>
-            @@include('html/components/card1.html',{"urlImg":"img/main-page/sec2/4.jpg","title":"АКСЕССУАРЫ","btnText":"ПЕРЕЙТИ В&nbsp;КАТАЛОГ"})
-          </li>
-        </ul>
+    <section class="section main-sec2 product-catalog-sec2">
+      <div class="main-sec2__contauner container">
+        <div class="main-sec2__content">
+          <ul class="main-sec2__list list-reset">
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/1.png","text":"Товары по акции"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/2.png","text":"Настольные кронштейны и крепления для ТВ и мониторов"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/3.png","text":"Потолочные кронштейны и крепления для ТВ и мониторов"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/4.png","text":"кронштейны для проекторов"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/5.png","text":"Кронштейны и крепления для профильных учреждений"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/6.png","text":"Полки, держатели и другие крепления"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/7.png","text":"Pro line"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/8.png","text":"gaming line"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/9.png","text":"стойки для телевизоров и мониторов"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/components/card7.html',{"urlImg":"img/main-sec2/10.png","text":"Товары для дома, офиса и быта"})
+            </li>
+            <li class="main-sec2__item">
+              @@include('html/boxs/box-form-help.html')
+            </li>
+          </ul>
+          <div class="product-catalog-sec2__swiper swiper">
+            <ul class="product-catalog-sec2__swiper-wrapper swiper-wrapper list-reset">
+              <li class="product-catalog-sec2__swiper-slide swiper-slide">
+                @@include('html/components/card9.html',{"urlImg":"img/product-catalog-sec2/1.jpg","title1":"Настольные","title2":"кронштейны и крепления"})
+              </li>
+              <li class="product-catalog-sec2__swiper-slide swiper-slide">
+                @@include('html/components/card9.html',{"urlImg":"img/product-catalog-sec2/1.jpg","title1":"Настольные","title2":"кронштейны и крепления и крепления и крепления и крепления и крепления"})
+              </li>
+              <li class="product-catalog-sec2__swiper-slide swiper-slide">
+                @@include('html/components/card9.html',{"urlImg":"img/product-catalog-sec2/1.jpg","title1":"Настольные","title2":"кронштейны и крепления"})
+              </li>
+            </ul>
+            <div class="product-catalog-sec2__swiper-pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section product-catalog-sec3">
+      <div class="product-catalog-sec3__container container-2">
+        <div class="product-catalog-sec3__content">
+          @@include('html/boxs/box-swiper1.html',{"section-title":"Смотрели ранее","classNext":"main-sec5__button-next","classPrev":"main-sec5__button-prev","idSwiper":"swiper-1"})
+        </div>
       </div>
     </section>
   </main>

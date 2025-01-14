@@ -1,5 +1,4 @@
 .box-orders {
-
   &__list {
     display: flex;
     flex-direction: column;
@@ -12,13 +11,11 @@
     }
         
     &::-webkit-scrollbar-track {
-      border-radius: 100px;
-      background-color: var(--color-background-card);
+      background-color: var(--color-text-white);
     }
         
     &::-webkit-scrollbar-thumb {
-      border-radius: 100px;
-      background-color: var(--color-text-black);
+      background-color: var(--akcent);
     }
   }
 
@@ -80,7 +77,7 @@
     align-items: center;
     justify-content: center;
     width: calc(178 / 1280 * 100%);
-    background-color: var(--color-background-card);
+    background-color: var(--color-text-white);
 
     &::before {
       content: "";
@@ -101,7 +98,7 @@
     justify-content: space-between;
     gap: clamp(50px, 2vw, 270px);
     padding: 30px;
-    background-color: var(--color-background-card);
+    background-color: var(--color-text-white);
   }
 
   &__desc-name {

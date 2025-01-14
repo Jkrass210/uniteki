@@ -1,13 +1,13 @@
 .box-orders-top-line {
-  border: 5px solid var(--color-text-black);
-  border-radius: 20px;
+  border: 1px solid var(--akcent);
+  border-radius: 10px;
   padding: 20px;
   margin-bottom: 15px;
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: var(--color-background-card);
+  background-color: var(--color-text-white);
 
   &__left {
     display: flex;

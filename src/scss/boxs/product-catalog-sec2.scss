@@ -1,0 +1,29 @@
+.product-catalog-sec2 {
+  padding-top: 0;
+  .main-sec2__list {
+    margin-bottom: 40px;
+  }
+  &__swiper {
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  &__swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+  }
+  &__swiper-pagination {
+    bottom: 20px !important;
+    .swiper-pagination-bullet {
+      margin: 0 4px !important;
+      &.swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background: var(--fon);
+      }
+      &.swiper-pagination-bullet-active {
+        background: var(--akcent);
+      }
+    }
+  }
+}

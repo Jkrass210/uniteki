@@ -86,6 +86,18 @@ if (document.querySelectorAll(".card3__swiper")){
   })
 }
 
+if (document.querySelector('.product-catalog-sec2__swiper')){
+  const swiperCatalog = new Swiper(".product-catalog-sec2__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    freeMode: false,
+    pagination: {
+      el: '.product-catalog-sec2__swiper-pagination',
+      clickable: true,
+    },
+  });
+}
+
 if (document.querySelector('#swiper-3') && document.querySelector('#swiper-3 > .swiper-wrapper') && document.querySelectorAll('#swiper-3 > .swiper-slide')) {
   const swiper3 = new Swiper("#swiper-3", {
     slidesPerView: 1,

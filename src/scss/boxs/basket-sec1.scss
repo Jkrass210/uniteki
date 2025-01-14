@@ -1,14 +1,15 @@
 .basket-sec1 {
+  background-color: var(--color-background-personal);
   &__top {
-    border-radius: 20px;
-    padding: 33px 38px 33px 33px;
+    border-radius: 10px;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 15px;
-    background-color: var(--color-background-card);
+    background-color: var(--color-text-white);
   }
 
   &__left {
