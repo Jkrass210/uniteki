@@ -1,0 +1,24 @@
+.box-swiper2 {
+  &__swiper-slide {
+    position: relative;
+    &::after {
+      border-radius: 16px;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-text-white);
+      opacity: 0.2;
+    }
+    .btn1 {
+      pointer-events: none;
+    }
+    &.swiper-slide-active {
+      &::after {
+        display: none;
+      }
+      .btn1 {
+        pointer-events: auto;
+      }
+    }
+  }
+}

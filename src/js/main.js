@@ -413,6 +413,23 @@ if(document.querySelectorAll(".drop-down3")){
   initializeDropdown('drop-down3__btn', 'drop-down3__list', 'active');
 }
 
+if(document.querySelector('.box-swiper2')){
+  const swiper21 = new Swiper('.box-swiper2__swiper', {
+    effect: 'coverflow', // Включаем эффект "coverflow"
+    grabCursor: true,
+    centeredSlides: true, // Центральный слайд по центру
+    slidesPerView: 3.7, // Слайды адаптируются к ширине контейнера
+    initialSlide: 3, // Устанавливаем центральный слайд активным
+    coverflowEffect: {
+      rotate: 0, // Угол поворота второстепенных слайдов
+      stretch: 0, // Растяжение между слайдами
+      depth: 105, // Глубина (перекрытие слайдов)
+      modifier: 2, // Интенсивность эффекта
+      slideShadows: false, // Тени для слайдов
+    },
+  });
+}
+
 
 
 
