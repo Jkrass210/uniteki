@@ -20,3 +20,19 @@
     }
   }
 }
+
+@media (max-width: 950px) {
+  .box-video {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 669px) {
+  .box-video {
+    &__list {
+      margin-bottom: 30px;
+    }
+  }
+}

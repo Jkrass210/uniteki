@@ -48,6 +48,7 @@
     position: relative;
     z-index: 1;
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     align-items: center;
   }
@@ -67,5 +68,50 @@
 .box-pro-line-2 {
   .box-pro-line__title {
     text-transform: uppercase;
+  }
+}
+
+@media (max-width: 1030px) {
+  .box-pro-line {
+    &__title {
+      font-size: 48px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .box-pro-line {
+    &__content {
+      padding: 30px 30px 230px;
+    }
+  }
+}
+
+@media (max-width: 669px) {
+  .box-pro-line {
+    &__content {
+      gap: 30px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 129%;
+    }
+    &__btn-group {
+      gap: 17px;
+      .btn1 {
+        width: 100%;
+      }
+      .btn8 {
+        width: 100%;
+      }
+    }
+  }
+  .box-pro-line-1 {
+    .box-pro-line__title {
+      font-size: 36px;
+    }
   }
 }

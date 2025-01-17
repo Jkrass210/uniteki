@@ -8,3 +8,11 @@
     }
   }
 }
+
+@media (max-width: 669px) {
+  .box-why {
+    &__list {
+      gap: 10px;
+    }
+  }
+}

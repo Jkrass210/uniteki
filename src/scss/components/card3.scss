@@ -28,6 +28,7 @@
 
     picture {
       display: flex;
+      justify-content: center;
     }
 
     &::before {
@@ -190,8 +191,13 @@
     }
 
     &__box-price {
-      flex-direction: column;
       align-items: stretch;
     }
+  }
+}
+
+@media (max-width: 950px) {
+  .card3 {
+    
   }
 }

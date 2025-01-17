@@ -46,3 +46,23 @@
     }
   }
 }
+
+@media (max-width: 1030px) {
+  .card10 {
+    &__info {
+      padding: 10px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .card10 {
+    &__info {
+      padding: 7px;
+    }
+    &__title {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+  }
+}

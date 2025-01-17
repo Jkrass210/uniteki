@@ -29,15 +29,19 @@ if (document.querySelectorAll('.drop-down-btn')) {
 
 if (document.querySelector('#swiper-1') && document.querySelector('#swiper-1 > .swiper-wrapper') && document.querySelectorAll('#swiper-1 > .swiper-slide')) {
   const swiper1 = new Swiper("#swiper-1", {
-    slidesPerView: 2,
-    spaceBetween: 20,
+    slidesPerView: 1,
+    spaceBetween: 10,
     freeMode: false,
     breakpoints: {
-      570: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+      520: {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
-      1090: {
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1200: {
         slidesPerView: 4,
         spaceBetween: 20,
       },
@@ -51,15 +55,19 @@ if (document.querySelector('#swiper-1') && document.querySelector('#swiper-1 > .
 
 if (document.querySelector('#swiper-2') && document.querySelector('#swiper-2 > .swiper-wrapper') && document.querySelectorAll('#swiper-2 > .swiper-slide')) {
   const swiper2 = new Swiper("#swiper-2", {
-    slidesPerView: 2,
-    spaceBetween: 20,
+    slidesPerView: 1,
+    spaceBetween: 10,
     freeMode: false,
     breakpoints: {
-      570: {
-        slidesPerView: 3,
-        spaceBetween: 20,
+      520: {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
-      1090: {
+      900: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      1200: {
         slidesPerView: 4,
         spaceBetween: 20,
       },
@@ -149,10 +157,10 @@ if (
       el: ".main-sec1__swiper-pagination",
       clickable: true,
     },
-    autoplay: {
+    /*autoplay: {
       delay: 5000,
       disableOnInteraction: false, // Продолжать автоплей после взаимодействия
-    },
+    },*/
   });
 
   swiper4.controller.control = swiper8;
@@ -418,7 +426,7 @@ if(document.querySelector('.box-swiper2')){
     effect: 'coverflow', // Включаем эффект "coverflow"
     grabCursor: true,
     centeredSlides: true, // Центральный слайд по центру
-    slidesPerView: 3.7, // Слайды адаптируются к ширине контейнера
+    slidesPerView: "auto", // Слайды адаптируются к ширине контейнера
     initialSlide: 3, // Устанавливаем центральный слайд активным
     coverflowEffect: {
       rotate: 0, // Угол поворота второстепенных слайдов
@@ -426,6 +434,20 @@ if(document.querySelector('.box-swiper2')){
       depth: 105, // Глубина (перекрытие слайдов)
       modifier: 2, // Интенсивность эффекта
       slideShadows: false, // Тени для слайдов
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2.7,
+        coverflowEffect: {
+          depth: 65,
+        }
+      },
+      1250: {
+        slidesPerView: 3.7,
+        coverflowEffect: {
+          depth: 105,
+        }
+      },
     },
   });
 }

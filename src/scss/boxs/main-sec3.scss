@@ -1,3 +1,26 @@
 .main-sec3 {
   padding-top: 180px;
 }
+@media (max-width: 1440px) {
+  .main-sec3 {
+    padding-top: calc(180px - (100vw - 1440px) * 0.15);
+  }
+}
+
+@media (max-width: 1030px) {
+  .main-sec3 {
+    padding-top: calc(180px - (100vw - 1030px) * 0.15);
+  }
+}
+
+@media (max-width: 950px) {
+  .main-sec3 {
+    padding-top: calc(200px - (100vw - 950px) * 0.15);
+  }
+}
+
+@media (max-width: 669px) {
+  .main-sec3 {
+    padding-top: 420px;
+  }
+}

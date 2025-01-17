@@ -2,7 +2,7 @@
   position: absolute;
   left: 130px;
   right: 130px;
-  bottom: -90px;
+  top: 95%;
   z-index: 4;
 
   &__list {
@@ -12,10 +12,25 @@
     box-shadow: 0 4px 15px 5px rgba(151, 151, 151, 0.25);
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 10px;
     justify-content: space-between;
     li {
       flex: 1;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .box-new-info {
+    left: 35px;
+    right: 35px;
+  }
+}
+@media (max-width: 669px) {
+  .box-new-info {
+    top: 90%;
+    &__list {
+      padding: 23px 16px 40px;
+      gap: 20px;
     }
   }
 }

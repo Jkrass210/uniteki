@@ -36,3 +36,13 @@
     color: var(--color-text-gray);
   }
 }
+
+@media (max-width: 669px) {
+  .btn-track-order {
+    span {
+      padding: 5px 5px 5px 8px;
+      font-size: 12px;
+    }
+    
+  }
+}

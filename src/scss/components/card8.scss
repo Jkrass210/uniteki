@@ -42,3 +42,14 @@
     }
   }
 }
+
+@media (max-width: 669px) {
+  .card8 {
+    &__content-box {
+      padding: 50px 20px 20px;
+      h3{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
