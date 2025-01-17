@@ -20,6 +20,9 @@
     border-radius: 20px;
     overflow: hidden;
     display: flex;
+    picture {
+      display: flex;
+    }
     img,picture {
       max-height: 200px;
       width: 100%;
@@ -80,6 +83,11 @@
         width: calc(380 / 1160 * 100%);
       }
     }
+    &__bottom-line {
+      .btn3__btn {
+        max-width: 218px;
+      }
+    }
   }
 }
 
@@ -91,6 +99,25 @@
       li {
         width: calc(415 / 840 * 100%);
       }
+    }
+    &__banner-box {
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    &__bottom-line {
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__link-download {
+      position: static;
+    }
+  }
+}
+
+@media (max-width: 669px) {
+  .catalog-sec1 {
+    &__banner-box {
+      display: none;
     }
   }
 }

@@ -39,3 +39,14 @@
     width: 100%;
   }
 }
+
+@media (max-width: 669px) {
+  .box-form-help {
+    h3 {
+      margin-bottom: 20px;
+    }
+    &__list {
+      flex-direction: column;
+    }
+  }
+}

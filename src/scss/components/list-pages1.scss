@@ -63,9 +63,14 @@
   }
 }
 
+@media (max-width: 900px) {
+  .list-pages {
+    padding-top: 40px;
+  }
+}
+
 @media (max-width: 669px) {
   .list-pages {
-    padding-top: 50px;
     &__list {
       gap: 3px;
     }
@@ -73,6 +78,7 @@
       width: 22px;
       min-width: 22px;
       height: 22px;
+      font-size: 14px;
     }
   }
 }

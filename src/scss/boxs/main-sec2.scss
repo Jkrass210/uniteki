@@ -15,10 +15,32 @@
   }
 }
 
+@media (max-width: 1030px) {
+  .main-sec2 {
+    &__list {
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main-sec2 {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
 @media (max-width: 669px) {
   .main-sec2 {
     padding-top: 40px;
     padding-bottom: 30px;
-
+    &__list {
+      grid-template-columns: 1fr;
+      li:last-child{
+        grid-column: span 1;
+      }
+    }
   }
 }

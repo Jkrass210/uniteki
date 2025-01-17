@@ -68,3 +68,22 @@
     }
   }
 }
+
+@media (max-width: 669px) {
+  .card7 {
+    &__link{
+      &::before {
+        width: 35px;
+        height: 60px;
+      }
+      img {
+        max-width: 73px;
+        max-height: 100px;
+      }
+      span {
+        padding: 15px 19px 15px 30px;
+        font-size: 12px;
+      }
+    }
+  }
+}
