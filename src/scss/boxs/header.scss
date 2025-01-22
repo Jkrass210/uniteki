@@ -97,6 +97,7 @@
 
   &__bottom {
     padding: 18px 0 18px 0;
+    background-color: var(--colir-background-body);
   }
 
   &__box-left {
@@ -167,6 +168,18 @@
     }
   }
 }
+
+.fixed {
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  background-color: var(--body);
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease-in-out;
+  transform: none;
+}
+
 
 @media (max-width: 1030px) {
   .header {

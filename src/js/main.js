@@ -157,10 +157,10 @@ if (
       el: ".main-sec1__swiper-pagination",
       clickable: true,
     },
-    /*autoplay: {
-      delay: 5000,
+    autoplay: {
+      delay: 7000,
       disableOnInteraction: false, // Продолжать автоплей после взаимодействия
-    },*/
+    },
   });
 
   swiper4.controller.control = swiper8;
