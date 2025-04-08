@@ -28,7 +28,7 @@ export function playVideo() {
 
   document.addEventListener('keydown', (event) => {
       if (event.code === 'Space') {
-          event.preventDefault();
+          //event.preventDefault();
           const activeVideo = Array.from(videos).find(video => !video.paused);
           if (activeVideo) {
               const button = activeVideo.nextElementSibling;

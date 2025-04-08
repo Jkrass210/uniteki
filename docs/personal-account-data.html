@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Личный кабинет</title>
-  <link href="css/normalize.min.css?_v=20250122130540" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css?_v=20250122130540" rel="stylesheet">
-  <link href="css/style.min.css?_v=20250122130540" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250408222447" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250408222447" rel="stylesheet">
+  <link href="css/style.min.css?_v=20250408222447" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js?_v=20250122130540" defer></script>
-  <script src="js/fslightbox-min.js?_v=20250122130540" defer></script>
-  <script type="module" src="js/main-min.js?_v=20250122130540"></script>
+  <script src="js/swiper-bundle.min.js?_v=20250408222447" defer></script>
+  <script src="js/fslightbox-min.js?_v=20250408222447" defer></script>
+  <script type="module" src="js/main-min.js?_v=20250408222447"></script>
 </head>
 <body>
   <header class="header fixed" id="header">
@@ -1908,7 +1908,9 @@
     <ul class="path__list list-reset">
       <li>
         <a href="/">
-          Главная
+          <span>
+            Главная
+          </span>
         </a>
       </li>
       <li>
@@ -1972,14 +1974,15 @@
                 </li>
               </ul>
               <div class="personal-data__btn-group">
-                <button class="personal-data__submit btn-reset">
+                <label class="personal-data__submit btn-reset">
+                  <input type="submit">
                   <span class="text">Сохранить</span>
                   <span class="box-svg">
                     <svg width="22" height="20" viewBox="0 0 22 20" fill="none">
                       <use xlink:href="img/sprite.svg#arrow"></use>
                     </svg>
                   </span>
-                </button>
+                </label>
                 <button class="personal-data__cancel btn-reset">Отмена</button>
               </div>
             </form>

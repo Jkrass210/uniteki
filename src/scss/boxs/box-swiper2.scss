@@ -1,4 +1,17 @@
 .box-swiper2 {
+  position: relative;
+  .box-swiper1__swiper-button {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    &.box-swiper2-next {
+      left: -5px;
+    }
+    &.box-swiper2-prev {
+      right: -5px;
+    }
+  }
   &__swiper-slide {
     position: relative;
     &::after {

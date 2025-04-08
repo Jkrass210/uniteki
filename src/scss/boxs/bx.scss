@@ -7,7 +7,7 @@
         font-family: var(--font-family);
         font-weight: 500;
         font-size: 20px;
-        color: var(--color-text-white);
+        color: var(--color-text-black);
 
         .bx-filter-param-label {
             display: flex;
@@ -17,46 +17,52 @@
         }
     }
 }
-.bx-authform-formgroup-container input[type="submit"]{
-    padding: 30px;
+
+.bx-authform-formgroup-container input[type="submit"] {
+    border-radius: 10px;
+    padding: 25px;
     width: 100%;
     cursor: pointer;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 16px;
     text-align: center;
-    color: var(--color-text-black);
+    color: var(--color-text-white);
     border: 1px solid var(--colir-background-body);
-    background-color: var(--color-background-yellow);
+    background-color: var(--akcent);
     transition: border-color 0.4s ease-in-out;
 
     &:focus,
     &:focus-visible {
-      outline: none;
+        outline: none;
     }
 
     &:focus-visible,
     &:active,
     &:hover {
-      border-color: var(--color-background-yellow);
+        border-color: var(--akcent);
     }
 }
+
 .bx-title {
     margin-bottom: 20px;
     font-family: var(--font-family);
     font-weight: 800;
     font-size: 32px;
-    letter-spacing: 0.03em;
-    color: var(--color-text-white);
+    color: var(--color-text-black);
 }
 
-.bx-authform-content-container, .bx-authform-label-container {
+.bx-authform-content-container,
+.bx-authform-label-container {
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 20px;
-    color: var(--color-text-white);
+    color: var(--color-text-black);
 }
-.bx-authform-input-container input[type="text"], .bx-authform-input-container input[type="password"] {
+
+.bx-authform-input-container input[type="text"],
+.bx-authform-input-container input[type="password"] {
+    border-radius: 10px;
     padding: 10px;
     flex: 1;
     border: 1px solid var(--colir-background-body);
@@ -64,7 +70,7 @@
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
-    color: var(--color-text-white);
+    color: var(--color-text-black);
     transition: border-color 0.4s ease-in-out;
 
     &:focus,
@@ -78,16 +84,18 @@
         border-color: var(--color-background-card);
     }
 }
+
 .bx-authform-link-container {
     font-weight: 500;
     font-size: 20px;
-    color: var(--color-text-white);
+    color: var(--color-text-black);
     text-align: center;
+
     a {
         font-family: var(--font-family);
         font-weight: 500;
         font-size: 20px;
-        color: var(--color-text-white);
+        color: var(--color-text-black);
         transition: color 0.4s ease-in-out;
 
         &:focus,
@@ -98,35 +106,126 @@
         &:focus-visible,
         &:hover,
         &:active {
-            color: var(--color-background-yellow);
+            color: var(--akcent);
         }
     }
 }
-.bx-authform-description-container, .bx-authform-note-container {
+
+.bx-authform-description-container,
+.bx-authform-note-container {
     text-align: center;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 20px;
     color: var(--color-text-black);
 }
+
 .bx-sbb-empty-cart-desc {
     font-family: var(--font-family);
     font-weight: 500;
     color: var(--color-text-black);
+
     a {
         cursor: pointer;
         transition: color 0.4s ease-in-out;
 
-        &:focus,&:focus-visible {
+        &:focus,
+        &:focus-visible {
             outline: none;
         }
 
-        &:focus-visible,&:hover,&:active {
+        &:focus-visible,
+        &:hover,
+        &:active {
             color: var(--color-text-gray);
         }
     }
 }
 
-.basket-coupon-text{
+.popup-window.popup-window-with-titlebar {
+    max-width: 500px;
+    left: 50% !important;
+    transform: translate(-50%);
+    background-color: var(--colir-background-body);
+    border-radius: 10px;
+}
+.popup-window-with-titlebar .popup-window-content {
+    background-color: transparent !important;
+}
+.popup-window-titlebar-text, .popup-window-titlebar-text-version {
+    font-size: 20px;
+    color: var(--color-text-black);
+    text-transform: uppercase;
+}
+.pop_block, .popup-window-content {
+    img {
+        margin-bottom: 10px;
+        background-color: var(--color-background-card);
+    }
+    p {
+        color: var(--color-text-black);
+        font-size: 20px;
+    }
+}
+
+.popup-window-buttons {
+    padding: 0;
+    .btn.btn-default {
+        width: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        font-size: 16px;
+        padding: 20px;
+        background-color: var(--akcent);
+        color: var(--color-text-white);
+        transition: background-color 0.4s ease-in-out;
+        &:hover,&:focus-visible,&:active {
+            background-color: var(--knopka);
+        }
+    }
+}
+
+.btn.btn-default.btn-buy.btn-sm, .btn.btn-primary.btn-buy.btn-sm {
+    font-size: 16px;
+}
+
+.basket-coupon-text {
     padding-left: 15px;
+}
+
+/*compare*/
+.catalog-compare-list {
+    display: none !important;
+}
+
+.bx_catalog-compare-list {
+    display: none;
+}
+
+/*order ajax*/
+.order-page-container #bx-soa-order .bx-soa-location-input-container input {
+    font-size: 14px !important;
+}
+
+font.notetext {
+    color: var(--color-text-black);
+}
+
+.box-clear-favorites-button {
+    display: flex;
+    margin-bottom: 15px;
+    .clear-favorites-button {
+        min-height: 35px;
+    }
+}
+
+@media (max-width: 1030px) {
+    .box-clear-favorites-button {
+        .btn3__btn {
+            width: auto;
+        }
+    }
 }

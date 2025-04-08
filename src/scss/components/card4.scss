@@ -10,6 +10,12 @@
   flex-direction: column;
   justify-content: space-between;
 
+  &__link {
+    position: absolute;
+    inset: 0;
+    display: flex;
+  }
+
   &__img, picture {
     border-radius: 20px;
     position: absolute;
@@ -22,6 +28,7 @@
 
   h3{
     position: relative;
+    pointer-events: none;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 20px;

@@ -59,4 +59,42 @@
       }
     }
   }
+
+  .checkbox5 {
+    white-space: wrap;
+    font-size: 12px;
+    gap: 5px;
+
+    &.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    input:checked + .checkbox5__castom {
+      background-color: var(--color-text-black);
+    }
+
+    input:disabled + .checkbox5__castom {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &__castom {
+      width: 15px;
+      min-width: 15px;
+      height: 15px;
+      transition: background-color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+      &::after {
+        display: none;
+      }
+    }
+  } 
+}
+
+@media (max-width: 669px) {
+  .drop-down3 {
+    &__btn {
+      white-space: wrap;
+    }
+  }
 }

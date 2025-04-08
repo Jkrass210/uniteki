@@ -1,5 +1,11 @@
 .modal_del_head {
     position: relative;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    #saferoute-tracking-widget {
+        display: flex;
+    }
     &_top {
         position: fixed;
         z-index: 4;
@@ -25,21 +31,22 @@
 }
 
 .modal_del_close {
+    border-radius: 100%;
     position: absolute;
     width: 20px;
     min-height: 20px;
     height: 20px;
-    top: -20px;
-    right: -20px;
+    top: 4px;
+    right: 4px;
     background-color: var(--color-text-black);
     span {
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 10%;
         display: inline-block;
-        width: 100%;
+        width: 80%;
         height: 2px;
-        background-color: var(--color-background-yellow);
+        background-color: var(--color-text-white);
         transition: background-color 0.4s ease-in-out;
 
         &:first-child{
@@ -54,7 +61,7 @@
     }
     &:focus-visible,&:hover,&:active {
         span {
-            background-color: var(--color-text-white);
+            background-color: var(--color-text-gray);
         }
     }
 }

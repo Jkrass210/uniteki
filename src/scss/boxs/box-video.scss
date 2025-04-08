@@ -11,10 +11,10 @@
   &__wrapp-video{
     position: relative;
     width: 100%;
-    video {
+    video, iframe {
       border-radius: 20px;
-      width: 100%;
-      height: 100%;
+      width: 100% !important;
+      height: 100% !important;
       max-height: 330px;
       object-fit: cover;
     }
@@ -25,6 +25,19 @@
   .box-video {
     &__list {
       grid-template-columns: 1fr;
+      .box-video__wrapp-video {
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          padding-top: 50%;
+        }
+        iframe, video {
+          position: absolute;
+          inset: 0;
+          max-height: 100%;
+        }
+      }
     }
   }
 }

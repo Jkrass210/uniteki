@@ -1,4 +1,13 @@
 .catalog-sec1 {
+  .title_sect {
+    margin-bottom: 40px;
+    h2 {
+      font-family: var(--font-family);
+      font-weight: 700;
+      font-size: 48px;
+      color: var(--color-text-black);
+    }
+  }
   &__top-line {
     margin-bottom: 10px;
     .btn2 {
@@ -16,7 +25,7 @@
     }
   }
   &__banner-box {
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     border-radius: 20px;
     overflow: hidden;
     display: flex;
@@ -74,6 +83,12 @@
 
 @media (max-width: 1200px) {
   .catalog-sec1 {
+    .title_sect {
+      margin-bottom: 40px;
+      h2 {
+        font-size: 32px;
+      }
+    }
     &__products-list {
       margin-bottom: 30px;
       column-gap: calc(10 / 1160 * 100%);
@@ -100,9 +115,15 @@
         width: calc(415 / 840 * 100%);
       }
     }
+    .title_sect {
+      margin-bottom: 10px;
+      h2 {
+        font-size: 24px;
+      }
+    }
     &__banner-box {
       border-radius: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
     &__bottom-line {
       flex-direction: column;

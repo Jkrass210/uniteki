@@ -12,13 +12,21 @@
           <img class="card3__img" src="@@urlImg" alt="img">
         </li>
       </ul>
+      <a href="#" class="card3__link-crd-1"></a>
       <div class="card3__swiper-pagination swiper-pagination"></div>
       <!--при добавлении на лайк класса active он красится-->
-      <button class="btn-reset">
-        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17212 5.67202C3.92223 4.92214 4.93946 4.50087 6.00012 4.50087C7.06078 4.50087 8.07801 4.92214 8.82812 5.67202L10.0001 6.84302L11.1721 5.67202C11.5411 5.28998 11.9825 4.98525 12.4705 4.77561C12.9585 4.56598 13.4834 4.45563 14.0145 4.45102C14.5456 4.4464 15.0723 4.54761 15.5639 4.74873C16.0555 4.94986 16.5021 5.24687 16.8777 5.62244C17.2533 5.99801 17.5503 6.44462 17.7514 6.9362C17.9525 7.42779 18.0537 7.95451 18.0491 8.48562C18.0445 9.01674 17.9342 9.54162 17.7245 10.0296C17.5149 10.5177 17.2102 10.959 16.8281 11.328L10.0001 18.157L3.17212 11.328C2.42224 10.5779 2.00098 9.56068 2.00098 8.50002C2.00098 7.43936 2.42224 6.42213 3.17212 5.67202V5.67202Z" stroke="currentColor" stroke-linejoin="round" />
-        </svg>
-      </button>
+      <div class="card3__top-group">
+        <button class="btn-reset">
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.17212 5.67202C3.92223 4.92214 4.93946 4.50087 6.00012 4.50087C7.06078 4.50087 8.07801 4.92214 8.82812 5.67202L10.0001 6.84302L11.1721 5.67202C11.5411 5.28998 11.9825 4.98525 12.4705 4.77561C12.9585 4.56598 13.4834 4.45563 14.0145 4.45102C14.5456 4.4464 15.0723 4.54761 15.5639 4.74873C16.0555 4.94986 16.5021 5.24687 16.8777 5.62244C17.2533 5.99801 17.5503 6.44462 17.7514 6.9362C17.9525 7.42779 18.0537 7.95451 18.0491 8.48562C18.0445 9.01674 17.9342 9.54162 17.7245 10.0296C17.5149 10.5177 17.2102 10.959 16.8281 11.328L10.0001 18.157L3.17212 11.328C2.42224 10.5779 2.00098 9.56068 2.00098 8.50002C2.00098 7.43936 2.42224 6.42213 3.17212 5.67202V5.67202Z" stroke="currentColor" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <a href="#" class="card3__btn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <use xlink:href="img/sprite.svg#111"></use>
+          </svg>
+        </a>
+      </div>
     </div>
     <a href="#" class="card3__link-card">
       @@text1
@@ -31,11 +39,7 @@
         <span class="price-old">3400&nbsp;р.</span>
       </p>
       <div class="card3__btn-group">
-        <a href="#" class="card3__btn">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <use xlink:href="img/sprite.svg#111"></use>
-          </svg>
-        </a>
+        @@include('./counter1.html')
         @@include('./btn3.html')
       </div>
     </div>

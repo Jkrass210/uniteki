@@ -7,6 +7,7 @@ import { toggleModal } from './module/toggleModal.js';
 import { newTabs } from './module/newTabs.js';
 import { playVideo } from './module/playVideo.js';
 import { initializeDropdown } from './module/initializeDropdown.js';
+import { boxProductLine } from './module/boxProductLine.js'
 
 
 testWebP(function (support) {
@@ -205,7 +206,7 @@ if (document.querySelector('.drop-down-catalog')) {
   if (window.innerWidth > 950){
     openMenuLevel1({
       boxCatalog:boxCatalog,
-      classBtns:'button.drop-down-catalog__btn', 
+      classBtns:'a.drop-down-catalog__btn', 
       classBox:'.drop-down-catalog__content-wrapp', 
       targetSelector:'.drop-down-catalog__main-content'
     });
@@ -435,6 +436,10 @@ if(document.querySelector('.box-swiper2')){
       modifier: 2, // Интенсивность эффекта
       slideShadows: false, // Тени для слайдов
     },
+    navigation: {
+      nextEl: ".box-swiper2-prev",
+      prevEl: ".box-swiper2-next",
+    },
     breakpoints: {
       640: {
         slidesPerView: 2.7,
@@ -452,6 +457,36 @@ if(document.querySelector('.box-swiper2')){
   });
 }
 
+if (document.querySelector('.product-card-sec1__box-right') && document.querySelector('.box-product-line')) {
+  boxProductLine();
+};
+
+if (document.querySelector('#swiper-20') && document.querySelector('#swiper-21')){
+  const swiper21 = new Swiper("#swiper-21", {
+    spaceBetween: 5, // Расстояние между слайдами превью
+    slidesPerView: 4, // Количество превью на экране
+    freeMode: true, // Свободная прокрутка
+    watchSlidesProgress: true, // Следит за активным слайдом
+    breakpoints: {
+      1030: {
+        spaceBetween: 10,
+        slidesPerView: 5,
+      },
+    },
+  });
+
+  const swiper20 = new Swiper("#swiper-20", {
+    spaceBetween: 4, // Отступ между слайдами
+    breakpoints: {
+      1030: {
+        spaceBetween: 10,
+      },
+    },
+    thumbs: {
+      swiper: swiper21, // Привязываем превью-слайдер
+    },
+  });
+}
 
 
 
