@@ -1,0 +1,42 @@
+.card101 {
+  .card10__info {
+    top: 50%;
+    transition: top 0.4s ease-in-out;
+    &:hover {
+      top: 0%;
+    }
+  }
+  .card10__info {
+    &:hover {
+      .card101__box-hidden {
+        //position: static;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  &__box-hidden {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    max-width: calc(100% - 38px);
+    transition: visibility 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  }
+  &__desc {
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: var(--color-text-white);
+  }
+}
+
+@media (max-width: 1030px) {
+  .card101 {
+    &__box-hidden {
+      max-width: calc(100% - 14px);
+    }
+  }
+}

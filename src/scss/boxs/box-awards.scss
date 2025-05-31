@@ -1,0 +1,27 @@
+.box-awards__swiper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  .box-swiper1__swiper-button {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: var(--akcent);
+    &.box-awards__next {
+      left: 0;
+    }
+    &.box-awards__prev {
+      right: 0;
+    }
+  }
+  .box-swiper1__swiper-button.swiper-button-disabled {
+    opacity: 0;
+  }
+  .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+  }
+
+}

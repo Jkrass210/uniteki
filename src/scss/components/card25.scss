@@ -1,0 +1,13 @@
+.card25 {
+  height: 100%;
+  display: flex;
+  a {
+    display: flex;
+    &:focus, &:focus-visible {
+      outline: none;
+    }
+    picture {
+      display: flex;
+    }
+  }
+}

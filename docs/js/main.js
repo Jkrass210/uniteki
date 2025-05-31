@@ -5,9 +5,10 @@ import { openMenu } from './module/openMenu.js';
 import { testWebP } from './module/testWebP.js';
 import { toggleModal } from './module/toggleModal.js';
 import { newTabs } from './module/newTabs.js';
-import { playVideo } from './module/playVideo.js';
+//import { playVideo } from './module/playVideo.js';
 import { initializeDropdown } from './module/initializeDropdown.js';
 import { boxProductLine } from './module/boxProductLine.js'
+import { setupFormValidation } from './module/setupFormValidation.js'
 
 
 testWebP(function (support) {
@@ -80,7 +81,7 @@ if (document.querySelector('#swiper-2') && document.querySelector('#swiper-2 > .
   });
 }
 
-if (document.querySelectorAll(".card3__swiper")){
+/*if (document.querySelectorAll(".card3__swiper")){
   document.querySelectorAll('.card3__swiper').forEach((swiperContainer) => {
     new Swiper(swiperContainer, {
       slidesPerView: 1,
@@ -95,7 +96,59 @@ if (document.querySelectorAll(".card3__swiper")){
       nested: true, // Важно для вложенных свайперов
     });
   })
+}*/
+
+function initCard3Swipers() {
+  document.querySelectorAll('.card3__swiper').forEach((swiperContainer) => {
+    if (!swiperContainer.classList.contains('swiper-initialized')) {
+      const swiper = new Swiper(swiperContainer, {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: '.card3__swiper-pagination',
+          clickable: true, // Отключаем клики по пагинации
+        },
+        allowTouchMove: false,
+        simulateTouch: false,
+        nested: true,
+      });
+
+      swiperContainer.classList.add('swiper-initialized');
+
+      /*let lastX = 0;
+      let moveAccumulator = 0; // Накопитель смещения
+      const threshold = 100; // Минимальная дистанция в пикселях для переключения (увеличил)
+
+      swiperContainer.addEventListener('mousemove', (e) => {
+        let deltaX = e.clientX - lastX;
+        moveAccumulator += deltaX; // Накопливаем изменение
+
+        if (Math.abs(moveAccumulator) > threshold) { 
+          if (moveAccumulator > 0) {
+            swiper.slideNext(); // Двигаем вправо
+          } else {
+            swiper.slidePrev(); // Двигаем влево
+          }
+          moveAccumulator = 0; // Сбрасываем накопитель после перелистывания
+        }
+
+        lastX = e.clientX; // Обновляем позицию
+      });*/
+    }
+  });
 }
+
+const observer = new MutationObserver(() => {
+  initCard3Swipers(); // Переинициализация, если появились новые карточки
+});
+
+observer.observe(document.body, {
+  childList: true,
+  subtree: true, // Отслеживание вложенных элементов
+});
+
+// Инициализируем Swiper для уже существующих карточек
+initCard3Swipers();
 
 if (document.querySelector('.product-catalog-sec2__swiper')){
   const swiperCatalog = new Swiper(".product-catalog-sec2__swiper", {
@@ -147,7 +200,7 @@ if (
     slidesPerView: 1,
     spaceBetween: 0,
     freeMode: false,
-    reverseDirection: true,
+    //reverseDirection: true,
   });
 
   const swiper8 = new Swiper("#swiper-8", {
@@ -157,6 +210,7 @@ if (
     pagination: {
       el: ".main-sec1__swiper-pagination",
       clickable: true,
+      //inversePagination: true,
     },
     autoplay: {
       delay: 7000,
@@ -168,25 +222,42 @@ if (
   swiper8.controller.control = swiper4;
 }
 
-
 function initSwiper5() {
   if (document.querySelector('#swiper-5') && document.querySelector('#swiper-5 > .swiper-wrapper') && document.querySelectorAll('#swiper-5 > .swiper-slide') && document.querySelector('#swiper-6') && document.querySelector('#swiper-6 > .swiper-wrapper') && document.querySelectorAll('#swiper-6 > .swiper-slide')) {
     const swiper6 = new Swiper("#swiper-6", {
       spaceBetween: 10,
       slidesPerView: 5,
       freeMode: false,
+      breakpoints: {
+        365: {
+          slidesPerView: 3,
+        },
+        450: {
+          slidesPerView: 4,
+        },
+        520: {
+          slidesPerView: 5,
+        },
+        1030: {
+          slidesPerView: 4,
+        },
+        1435: {
+          slidesPerView: 5,
+        }
+      }
       //watchOverflow: true,
       //watchSlidesProgress: true,
     });
     const swiper5 = new Swiper("#swiper-5", {
       spaceBetween: 10,
       navigation: {
-        nextEl: ".product-card-sec1__button-prev",
-        prevEl: ".product-card-sec1__button-next",
+        nextEl: ".product-card-sec1__button-next",
+        prevEl: ".product-card-sec1__button-prev",
       },
       thumbs: {
         swiper: swiper6,
       },
+      allowTouchMove: false,
     })
   }
 }
@@ -414,9 +485,9 @@ if (document.querySelector('.box-double-catalog')){
   newTabs();
 }
 
-if(document.querySelectorAll(".btn-video-play")) {
+/*if(document.querySelectorAll(".btn-video-play")) {
   playVideo()
-}
+}*/
 
 if(document.querySelectorAll(".drop-down3")){
   initializeDropdown('drop-down3__btn', 'drop-down3__list', 'active');
@@ -457,6 +528,41 @@ if(document.querySelector('.box-swiper2')){
   });
 }
 
+if(document.querySelector('.box-swiper3')){
+  const swiper21 = new Swiper('.box-swiper3__swiper', {
+    effect: 'coverflow', // Включаем эффект "coverflow"
+    //grabCursor: true,
+    centeredSlides: true, // Центральный слайд по центру
+    slidesPerView: "auto", // Слайды адаптируются к ширине контейнера
+    initialSlide: 3, // Устанавливаем центральный слайд активным
+    coverflowEffect: {
+      rotate: 20, // Угол поворота второстепенных слайдов
+      stretch: 0, // Растяжение между слайдами
+      depth: 100, // Глубина (перекрытие слайдов)
+      modifier: 2, // Интенсивность эффекта
+      slideShadows: false, // Тени для слайдов
+    },
+    navigation: {
+      nextEl: ".box-swiper2-prev",
+      prevEl: ".box-swiper2-next",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2.6,
+        coverflowEffect: {
+          depth: 100,
+        }
+      },
+      1250: {
+        slidesPerView: 3.6,
+        coverflowEffect: {
+          depth: 100,
+        }
+      },
+    },
+  });
+}
+
 if (document.querySelector('.product-card-sec1__box-right') && document.querySelector('.box-product-line')) {
   boxProductLine();
 };
@@ -488,10 +594,120 @@ if (document.querySelector('#swiper-20') && document.querySelector('#swiper-21')
   });
 }
 
+/*if(document.querySelectorAll("#productViewer")){
+$(document).ready(function () {
+  const frames = 36;
+  const imagePath = "../img/360/{frame}.jpg";
+  const viewer = $("#productViewer");
 
+  viewer.spritespin({
+    source: Array.from({ length: frames }, (_, i) => imagePath.replace("{frame}", i + 1)),
+    width: 500,
+    height: 400,
+    sense: -1,
+    responsive: true,
+    animate: false, // Стартуем без анимации
+    loop: true,
+    frame: 0,
+    behavior: "drag",
+  });
 
+  let isAnimating = false;
 
+  $("#toggle360").on("click", function () {
+    const api = viewer.spritespin("api");
+  
+    if (api && api.data) {
+      if (isAnimating) {
+        api.stopAnimation(); // Останавливаем анимацию
+        isAnimating = false;
+        $("#toggle360").removeClass("active"); // Удаляем класс
+      } else {
+        api.startAnimation(); // Запускаем анимацию
+        isAnimating = true;
+        $("#toggle360").addClass("active"); // Добавляем класс
+      }
+    }
+  });
+});
+}*/
 
+if (document.querySelectorAll('.box-form-1__form')){
+  document.querySelectorAll(".box-form-1__form").forEach(form => {
+    setupFormValidation(form, ".box-form-1__submit");
+  });
+}
 
+if (document.querySelector('.partners-sec2__swiper')) {
+  const swiperEl = document.querySelector('.partners-sec2__swiper');
+  const swiperWrapper = swiperEl.querySelector('.swiper-wrapper');
+  const slides = swiperWrapper.querySelectorAll('.swiper-slide');
 
+  const partnersSwiper = new Swiper('.partners-sec2__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 7,
+    //centeredSlides: true,
+    //initialSlide: 3,
+    speed: 1000,
+    freeMode: {
+      enabled: true,  // свободное перемещение (без привязки к слайдам)
+      momentum: true, // инерция при прокрутке
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+      waitForTransition: true,
+    },
+    breakpoints: {
+      580: { slidesPerView: 2, spaceBetween: 10 },
+      850: { slidesPerView: 4, spaceBetween: 15 },
+      1030: { slidesPerView: 5, spaceBetween: 27 },
+    },
+    navigation: {
+      nextEl: '.partners-sec2__btn-prev',
+      prevEl: '.partners-sec2__btn-next',
+    },
+    on: {
+      reachEnd: () => {
+        // При достижении конца добавляем копии первых слайдов
+        slides.forEach((slide) => {
+          const clone = slide.cloneNode(true);
+          swiperWrapper.appendChild(clone);
+        });
+        partnersSwiper.update(); // обновляем Swiper
+      },
+    },
+  });
+  swiperEl.addEventListener('mouseenter', () => partnersSwiper.autoplay.stop());
+  swiperEl.addEventListener('mouseleave', () => partnersSwiper.autoplay.start());
+}
 
+if (document.querySelector('.box-awards__swiper')){
+  const awardsSwiper = new Swiper('.box-awards__swiper', {
+    slidesPerView: 'auto', // Автоматическое количество видимых слайдов
+    spaceBetween: 5, // Отступ между слайдами 10px
+    //loop: true, // Бесконечный цикл
+    navigation: {
+      nextEl: '.box-awards__prev', // Кнопка "вперед"
+      prevEl: '.box-awards__next', // Кнопка "назад"
+    },
+    breakpoints: {
+      // Адаптивные настройки для разных размеров экрана
+      320: {
+        slidesPerView: 2,
+      },
+      576: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 6,
+      },
+      992: {
+        slidesPerView: 9,
+      },
+      1200: {
+        slidesPerView: 12,
+      }
+    }
+  });
+}

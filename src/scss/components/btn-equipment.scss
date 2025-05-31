@@ -14,11 +14,12 @@
   &:hover,
   &:active {
     .btn-equipment__box-img {
-      border-color: var(--color-text-gray);
+      border-color: var(--akcent);
     }
   }
 
   &__box-img {
+    overflow: hidden;
     border-radius: 10px;
     position: relative;
     width: 88px;
@@ -28,6 +29,10 @@
     justify-content: center;
     transition: border-color 0.4s ease-in-out;
     border: 1px solid var(--border2);
+
+    picture {
+      display: flex;
+    }
 
     &::before {
       content: "";

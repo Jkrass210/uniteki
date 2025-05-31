@@ -1,0 +1,28 @@
+.box-swiper3 {
+  position: relative;
+  .box-swiper1__swiper-button {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    transform: translateY(-50%);
+    &.box-swiper2-next {
+      left: -25px;
+    }
+    &.box-swiper2-prev {
+      right: -25px;
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .box-swiper3 {
+    .box-swiper1__swiper-button {
+      &.box-swiper2-next {
+        left: -15px;
+      }
+      &.box-swiper2-prev {
+        right: -15px;
+      }
+    }
+  }
+}

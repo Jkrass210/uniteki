@@ -1,0 +1,12 @@
+.btn360 {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: #ffffffb5;
+  &.active {
+    background-color: transparent;
+    svg {
+      display: none;
+    }
+  }
+}

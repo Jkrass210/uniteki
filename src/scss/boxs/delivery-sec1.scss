@@ -1,0 +1,13 @@
+.delivery-sec1 {
+  &__info {
+    max-width: 645px;
+  }
+}
+@media (max-width: 1030px) {
+  .delivery-sec1 {
+    &__info {
+      font-size: 14px;
+      max-width: 100%;
+    }
+  }
+}

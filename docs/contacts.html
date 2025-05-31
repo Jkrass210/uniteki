@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Контакты</title>
-  <link href="css/normalize.min.css?_v=20250408222447" rel="stylesheet">
-  <link href="css/swiper-bundle.min.css?_v=20250408222447" rel="stylesheet">
-  <link href="css/style.min.css?_v=20250408222447" rel="stylesheet">
+  <link href="css/normalize.min.css?_v=20250531073521" rel="stylesheet">
+  <link href="css/swiper-bundle.min.css?_v=20250531073521" rel="stylesheet">
+  <link href="css/style.min.css?_v=20250531073521" rel="stylesheet">
 
-  <script src="js/swiper-bundle.min.js?_v=20250408222447" defer></script>
-  <script src="js/fslightbox-min.js?_v=20250408222447" defer></script>
-  <script type="module" src="js/main-min.js?_v=20250408222447"></script>
+ 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js?_v=20250531073521" defer></script>
+  <script src="js/cleave-min.js?_v=20250531073521" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/spritespin@4.0.7/release/spritespin.min.js?_v=20250531073521" defer></script>
+  <script src="js/swiper-bundle.min.js?_v=20250531073521" defer></script>
+  <script src="js/fslightbox-min.js?_v=20250531073521" defer></script>
+  <script type="module" src="js/main-min.js?_v=20250531073521"></script>
 </head>
 <body>
   <header class="header fixed" id="header">
@@ -1926,41 +1930,54 @@
 </div>
     <section class="section contacts-sec1">
       <div class="contacts-sec1__container container">
-        <h2 class="section-title">
-  Контакты
-</h2>
-        <div class="contacts-sec1__top">
-          <div class="contacts-sec1__info">
-            <p>Оптовый отдел / Розничный отдел / Самовывоз</p>
-            <p>Уважаемые клиенты!</p>
-            <p>
-              По этому адресу для вас работает наш ШОУРУМ, где вы можете лично ознакомиться, протестировать и купить продукцию Nitecore. Ждем вас!
-            </p>
+        <div class="contacts-sec1__top-info-box">
+          <div class="contacts-sec1__left-box">
+            <div class="min-title">
+              <span>Оптовый отдел / Розничный отдел / Самовывоз</span>
+            </div>
+            <h1 class="about-us-sec1__title">
+              Контакты
+            </h1>
+            <div class="contacts-sec1__info">
+              <p>Уважаемые клиенты!</p>
+              <p>
+                По этому адресу для вас работает наш ШОУРУМ, где вы можете лично ознакомиться, протестировать и купить продукцию Nitecore. Ждем вас!
+              </p>
+            </div>
           </div>
-          <address class="contacts-sec1__address">
-            <ul class="contacts-sec1__list-address list-reset">
-              <li>
-                <p>Москва г., Пятницкое шоссе., дом 18, пав 33</p>
-              </li>
-              <li>
-                <a href="tel:+74956601798">+7 (495) 660-17-98</a>
-              </li>
-              <li>
-                <a href="mailto:info@nitecore.ru">info@nitecore.ru</a>
-              </li>
-            </ul>
-            <ul class="contacts-sec1__list-chart list-reset">
-              <li>
-                График работы: с 9:00 до 18:00 ежедневно без выходных и перерывов.
-              </li>
-              <li>
-                График работы пункта самовывоза: с 9:00 до 19:00 ежедневно без выходных и перерывов.
-              </li>
-            </ul>
-          </address>
+          <div class="contacts-sec1__right-box">
+            <div class="about-us-sec1__table-wrapp">
+              <ul class="product-card-sec1__table list-reset">
+                <li class="product-card-sec1__table-row">
+                  <p>Адрес</p>
+                  <p>Москва г., Пятницкое шоссе., дом 18, пав 33</p>
+                </li>
+                <li class="product-card-sec1__table-row">
+                  <p>Номер телефона</p>
+                  <p><a href="tel:+74956601798">+7 (495) 660-17-98</a></p>
+                </li>
+                <li class="product-card-sec1__table-row">
+                  <p>Электронная почта</p>
+                  <p><a href="mailto:info@nitecore.ru">info@nitecore.ru</a></p>
+                </li>
+                <li class="product-card-sec1__table-row">
+                  <p>Время работы 1</p>
+                  <p><span>с 9:00 до 18:00</span>
+                    <span>ежедневно без выходных и перерывов.</span>
+                  </p>
+                </li>
+                <li class="product-card-sec1__table-row">
+                  <p>Время работы 2</p>
+                  <p><span>с 9:00 до 19:00</span>
+                    <span>ежедневно без выходных и перерывов.</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="contacts-sec1__map"></div>
-        <div class="contacts-sec1__box-form">
+        <!--<div class="contacts-sec1__box-form">
           <form class="contacts-sec1__form personal-data__form" method="post" action="#">
             <h3 class="contacts-sec1__title-form">
               Оставьте заявку и мы свяжемся с вами
@@ -1992,9 +2009,39 @@
               </span>
             </button>
           </form>
-        </div>
+        </div>-->
       </div>
     </section>
+    <section class="section box-form-1">
+  <div class="box-form-1__container container">
+    <div class="box-form-1__content">
+      <h2 class="section-title">
+  Оставьте заявку — мы перезвоним!
+</h2>
+      <form class="box-form-1__form" accept="#" method="post">
+        <ul class="box-form-1__list list-reset">
+          <li>
+            <input class="box-form-1__input" type="text" name="name" id="name1" placeholder="Ваше имя">
+          </li>
+          <li>
+            <input class="box-form-1__input" type="tel" name="phone" id="tel1" placeholder="+7(999) 999-99-99">
+          </li>
+          <li>
+            <button class="box-form-1__submit disabled btn3__btn btn-reset">Оставить заявку</button>
+          </li>
+        </ul>
+        <label class="checkbox4">
+  <input type="checkbox" name="approval" id="approval">
+  <span class="checkbox4__castom-input">
+  </span>
+  <span class="checkbox4__text">
+    Нажимая на кнопку «Оставить заявку», вы соглашаетесь с условиями <a href="#">политики обработки персональных данных</a>
+  </span>
+</label>
+      </form>
+    </div>
+  </div>
+</section>
   </main>
   <footer class="footer" id="footer">
   <svg style="display: none;" xmlns="http://www.w3.org/2000/svg">

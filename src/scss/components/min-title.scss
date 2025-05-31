@@ -1,0 +1,23 @@
+.min-title {
+  display: flex;
+  margin-bottom: 20px;
+  span {
+    border: 1px solid var(--ui);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--ui-2);
+  }
+}
+@media (max-width: 1030px) {
+  .min-title {
+    margin-bottom: 10px;
+    span {
+      padding: 10px 10px;
+      font-size: 12px;
+    }
+  }
+}
